@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Lato:wght@100;400;900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+    <title>todo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css"
+        integrity="sha512-Jp3oCtkKo8j/WRrHq2jrYMtJogclQybtR6+81arCLTO/TvWj3oaF4NkZQs2bTqWJ8An8L2MLKKfvsn3H8vZP1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu icon">
+                <h2>TODO</h2>
+                <img src="./images/icon-sun.svg" alt="sun" id="icon">
+            </div>
+            <div class="form">
+                <input class="check-button" type="checkbox" id="x">
+                <label for="x">
+                    <img src="./images/icon-check.svg" alt="">
+                </label>
+                <input class="new-class" type="text" placeholder="Create a new todo....">
+            </div>
+
+            <div class="Boxes">
+                <!-- <div class="box"><input class="check-button" type="checkbox" id="${obj.id}">
+                <label for="${obj.id}">
+                    <img src="./images/icon-check.svg" alt="">
+                </label>
+                <h2>${obj.todo}</h2>
+                <div class="cancel">
+                    <img src="./images/icon-cross.svg" alt="">
+                </div>
+                <div class="vl"></div> -->
+            </div>
+            <div class="section-list">
+                <ul class="list">
+                    <li class="text-0">0 items left</li>
+                    <li class="text-1">All</li>
+                    <li class="text-2">Active</li>
+                    <li class="text-3">Completed</li>
+                    <li class="text-4">Clear Completed</li>
+                </ul>
+            </div>
+            <footer class="footer">
+                <h2>Drag and drop to reoder list</h2>
+            </footer>
+    </header>
+    <script src="script.js"></script>
+</body>
+
+</html>

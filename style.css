@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Lato:wght@100;400;900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--primary-color);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  --primary-color: hsl(234.78deg 23.71% 19.02%);
+  --secondary-color: hsl(240deg 3.33% 76.47%);
+}
+.light-theme .header {
+  background-image: url("./images/bg-desktop-light.jpg");
+}
+.light-theme {
+  --primary-color: #edf2fc;
+  --secondary-color: hsl(234.78deg 23.71% 19.02%);
+  transition: all 0.1s ease-in-out;
+}
+.header {
+  background-image: url("./images/bg-desktop-dark.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  transition: all 0.3s ease-in-out;
+}
+.container {
+  width: 40%;
+  height: 50rem;
+  position: relative;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.none {
+  display: none;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40rem;
+  font-size: 3rem;
+  color: var(--primary-color);
+  letter-spacing: 3rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media only screen and (max-width: 375px) {
+  .menu {
+    justify-content: unset;
+    gap: 0rem;
+  }
+}
+.menu:last-child {
+  transition: all 1s ease-in-out;
+}
+.menu h2 {
+  color: white;
+}
+.form {
+  background: var(--primary-color);
+  margin-bottom: 50px;
+  margin-top: 5rem;
+  height: 8rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 3rem 1.5rem;
+}
+.form input {
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  padding: 0rem 4rem;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  caret-color: hsl(222.12deg 77.44% 38.24%);
+  caret: 0.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
+  bottom: 1.5rem;
+}
+.form input::placeholder {
+  color: var(--secondary-color);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+.Boxes {
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+  overflow: auto; /* Changed from overflow-x */
+  max-height: 50vh;
+  box-shadow: 1px 5rem 25px rgba(0, 0, 0, 0.048);
+  transition: all 0.1s ease-in-out;
+  /* padding-bottom: 50px; */
+}
+.boxes:last-child {
+  border: 1px solid hsla(240, 12%, 95%, 0.196);
+}
+/* Set the width of the scrollbar */
+
+::-webkit-scrollbar {
+  width: 0; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(
+    --secondary-color
+  ); /* Set the background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888888; /* Set the color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555555; /* Set the color of the scrollbar thumb on hover */
+}
+
+.Boxes h2 {
+  flex-basis: 80%;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 1.5rem;
+  border-bottom: 1px solid hsla(240, 2%, 59%, 0.2);
+  /* overflow-y: auto; */
+}
+/* 
+hsl(234.78deg 23.71% 19.02%) */
+.box h2 {
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.box .cancel {
+  visibility: hidden;
+}
+.box:hover .cancel {
+  visibility: visible;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    hsla(236, 15%, 36%, 0.152),
+    hsla(236, 15%, 36%, 0.152)
+  );
+  background-size: cover;
+  background-position: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-right: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+label img {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease-in-out;
+}
+
+label::after {
+  content: "";
+  display: inline-block;
+  width: 2.9rem;
+  height: 2.7rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label:hover {
+  background: linear-gradient(
+    to right,
+    hsl(205.9deg 90.85% 70%),
+    hsl(252.3deg 100% 76.08%)
+  );
+}
+
+input[type="checkbox"]:checked + label::after {
+  /* transform: scale(1) rotateZ(0deg); */
+  display: none;
+}
+
+input[type="checkbox"]:checked + label {
+  transform: scale(1) rotateZ(0deg);
+  background-image: linear-gradient(
+    to right,
+    hsl(205.9deg 90.85% 70%),
+    hsl(252.3deg 100% 76.08%)
+  );
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.section-list .list {
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary-color);
+  list-style: none;
+  font-size: 15px;
+  padding: 3rem 2.5rem;
+  font-size: 18px;
+  box-shadow: 1px 5rem 25px rgba(0, 0, 0, 0.075);
+  border-top: 1px solid hsla(240, 2%, 59%, 0.2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: hsla(236, 15%, 36%, 0.447);
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+.text-1 {
+  color: hsl(222.12deg 77.44% 38.24%);
+}
+
+/* .text-2 {
+  color: hsl(234deg 13.51% 85.49%);
+} */
+
+.text-2:hover {
+  color: var(--secondary-color);
+}
+.text-4:hover {
+  color: var(--secondary-color);
+}
+.text-3:hover {
+  color: var(--secondary-color);
+}
+/* .text-2:active {
+  color: blue;
+}
+.text-4:active {
+  color: blue;
+}
+.text-3:active {
+  color: blue;
+} */
+
+/* .text-3 {
+  color: hsl(234deg 13.51% 85.49%);
+} */
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  color: hsla(60, 1%, 30%, 0.408);
+}
